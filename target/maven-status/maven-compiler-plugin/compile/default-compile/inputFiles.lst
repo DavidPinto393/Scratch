@@ -1,0 +1,12 @@
+/workspaces/Scratch/src/main/java/com/scratch/Application.java
+/workspaces/Scratch/src/main/java/com/scratch/rest/controller/ValidationController.java
+/workspaces/Scratch/src/main/java/com/scratch/service/CAndOCSVValidationService.java
+/workspaces/Scratch/src/main/java/com/scratch/utilities/Patterns.java
+/workspaces/Scratch/src/main/java/com/scratch/validators/dataset/CSVFileValidator.java
+/workspaces/Scratch/src/main/java/com/scratch/validators/dataset/DatasetValidator.java
+/workspaces/Scratch/src/main/java/com/scratch/validators/field/FieldValidator.java
+/workspaces/Scratch/src/main/java/com/scratch/validators/field/ListValidator.java
+/workspaces/Scratch/src/main/java/com/scratch/validators/field/NumberValidator.java
+/workspaces/Scratch/src/main/java/com/scratch/validators/field/StringValidator.java
+/workspaces/Scratch/src/main/java/com/scratch/validators/models/MandatoryValidation.java
+/workspaces/Scratch/src/main/java/com/scratch/validators/models/ValidatorResponse.java
