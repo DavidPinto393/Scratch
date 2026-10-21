@@ -70,8 +70,6 @@ public class CSVFileValidator implements DatasetValidator{
                         String message = validator.validate(row.get(header));
                         if( !"".equals(message) ){
                             errors += message;
-                            errorCount++;
-                            errorDetails.add(String.format("Error(s) in Line %d: %s",recordCount,message));
                         }
                     }
                 }

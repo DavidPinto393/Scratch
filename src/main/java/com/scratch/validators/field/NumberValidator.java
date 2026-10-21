@@ -12,8 +12,6 @@ import lombok.experimental.SuperBuilder;
 @EqualsAndHashCode(callSuper=false)
 public class NumberValidator extends FieldValidator {
 
-    String fieldName;
-
     @Builder.Default
     int min = 0;
     
@@ -38,18 +36,21 @@ public class NumberValidator extends FieldValidator {
         else if(!mandatoryValidation.isValid()){
             return String.format( "Value of %s is blank.", fieldName );
         }
+        
         if( value instanceof String ) {
             try{
-                fieldValue = Double.valueOf((String)value);
+                fieldValue = Double.parseDouble((String)value);
             }
             catch(NumberFormatException e) {
                 return String.format( "Value of %s is not a Number. ", fieldName );
             }
         }
-        if( !(value instanceof Number) ) {
+        else if( !(value instanceof Number) ) {
             return String.format( "Value of %s is not a Number. ", fieldName );
         }
-        fieldValue = (Number)value;
+        else {
+            fieldValue = (Number)value;
+        }
 
         if( min>0 && fieldValue.doubleValue()<min ) {
             errorString += String.format( "Value of %s does not meet minimum value of %d. ", fieldName, min );

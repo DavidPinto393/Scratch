@@ -11,15 +11,17 @@ public abstract class FieldValidator {
 
     protected boolean mandatory;
 
+    protected String fieldName;
+
     public abstract String validate(Object value);
 
     protected MandatoryValidation validateMandatory(Object value) {
-        if(!mandatory) {
-            return MandatoryValidation.builder().skip(true).valid(true).build();
-        }
-        if(value==null || "".equals((String)value)) {
+        if(value==null || "".equals(value.toString())) {
+            if(!mandatory) {            
+                return MandatoryValidation.builder().skip(true).valid(true).build();
+            }
             return MandatoryValidation.builder().skip(false).valid(false).build();
         }
-            return MandatoryValidation.builder().skip(false).valid(true).build();
+        return MandatoryValidation.builder().skip(false).valid(true).build();
     }
 }

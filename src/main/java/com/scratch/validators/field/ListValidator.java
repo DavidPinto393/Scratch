@@ -16,8 +16,6 @@ import lombok.experimental.SuperBuilder;
 @EqualsAndHashCode(callSuper=false)
 public class ListValidator extends FieldValidator {
 
-    String fieldName;
-
     @Builder.Default
     List<String> validStrings = new ArrayList<>();
 

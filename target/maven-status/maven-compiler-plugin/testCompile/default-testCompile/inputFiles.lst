@@ -1,0 +1,11 @@
+/workspaces/Scratch/src/test/java/com/scratch/validators/utils/TestPojoWithoutGetter.java
+/workspaces/Scratch/src/test/java/com/scratch/validators/utils/TestPojo.java
+/workspaces/Scratch/src/test/java/com/scratch/validators/dataset/PojoValidatorTest.java
+/workspaces/Scratch/src/test/java/com/scratch/validators/utils/TestPojoWithoutToError.java
+/workspaces/Scratch/src/test/java/com/scratch/validators/utils/TestErrorPojoWithoutToError.java
+/workspaces/Scratch/src/test/java/com/scratch/validators/dataset/CSVFileValidatorTest.java
+/workspaces/Scratch/src/test/java/com/scratch/validators/utils/TestErrorPojo.java
+/workspaces/Scratch/src/test/java/com/scratch/validators/field/NumberValidatorTest.java
+/workspaces/Scratch/src/test/java/com/scratch/validators/utils/TestErrorPojoWithoutGetter.java
+/workspaces/Scratch/src/test/java/com/scratch/validators/field/ListValidatorTest.java
+/workspaces/Scratch/src/test/java/com/scratch/validators/field/StringValidatorTest.java

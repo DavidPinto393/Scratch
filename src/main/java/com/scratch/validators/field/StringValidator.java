@@ -15,8 +15,6 @@ import java.util.regex.Pattern;
 @EqualsAndHashCode(callSuper=false)
 public class StringValidator extends FieldValidator {
 
-    String fieldName;
-
     @Builder.Default
     int minLength = 0;
     
@@ -68,11 +66,11 @@ public class StringValidator extends FieldValidator {
         }        
 
         if( email && !Patterns.EMAIL_PATTERN.matcher(fieldValue).matches() ) {
-            errorString += String.format( "Value of %s is not an email. ", fieldName );
+            errorString += String.format( "Value of %s is not a valid email address. ", fieldName );
         }
 
         if( regex!=null && !Pattern.compile(regex).matcher(fieldValue).matches()) {
-            errorString += String.format( "Value of %s does not match pattern %s. ", fieldName, regex );
+            errorString += String.format( "Value of %s does not match the required pattern %s. ", fieldName, regex );
         }
 
         return errorString;
